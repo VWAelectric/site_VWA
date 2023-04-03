@@ -1,0 +1,233 @@
+*{
+    margin: 0;
+    padding: 0;
+    /* 
+    Dessa forma indicamos que todas as margens seram retiradas
+    para que possamos edita-las de maneira personalizada.
+    */
+
+    box-sizing: border-box;
+    /* 
+    Utilizamos o comando (border-sizing) com o valor (border-box).
+    Isso faz com que as margens internas aplicadas ao elemento html
+    não interfiram no tamanho da caixa em que esse elemento está.
+    */
+}
+header
+{
+height: 200px;
+/* 
+Com o comando (height) determinamos a altura do cabeçalho, neste
+caso estamos trabalhamdo em pixels (px), deixando em uma altura
+de 300px.
+*/
+background-image: url(../img/materiais.jpg);
+/* 
+Com esse comando podemos add uma imagem ao fundo via css,
+porém temos que se atentar com alguns detalhes, a imagem
+que buscamos não se encontra dentro da pasta css, para 
+que possamos encontrar essa imagem que se encontra na pasta
+img temos que add (../) antes do caminho a percorrer.
+*/
+background-size: 100%;
+/* 
+Com o (background-size) nós ajustamos a largura de nossa imagem
+neste caso em 100%, fazendo com que a imagem fique na largura da
+tela.
+*/
+background-position: 0px -80px;
+/* 
+Para realizar o deslocamento da imagem de fundo utilizamos o 
+comando (background-position). Assim você pode deslocar para cima 
+ou para baixo no eixo (Y), para a direita ou para a esquerda no 
+eixo (X), podemos usar valores positivos ou negativos, com isso 
+ao usarmos valores negativos no eixo (Y), a imagem se desloca para
+cima e valores positivos se desloca para baixo, no eixo (X) isso 
+funciona da mesma forma, porém valores negativos a imagem se desloca
+para a esquerda e valores positivos para direita.
+*/
+}
+#cabecalho
+{
+    background-color: rgba(255, 255, 255, 0.7);
+    /* 
+    Com o (background-color) mudamos a cor de fundo do cabeçalho,
+    que pode ser uma cor sólida ou podemos também trabalhar a opa-
+    cidade da cor inserida. Isso nos dá um efeito de transparência,
+    que foi usado nesse exemplo a cor (rgba) sendo r (vermelho), g
+    (verde), b (azul), a (opacidade da cor), que varia de 0 à 1, on-
+    de 0 (zero) totalmente visível e 1 (um) totalmente sólido.    
+    */
+    height: 200px;
+    /* 
+    Com o comando (height) aplicado aqui determinamos a altura da 
+    cor do cabeçalho, neste caso estamos trabalhamdo em pixels (px), 
+    deixando em uma altura de 300px.
+    */
+}
+#superior
+{
+    display: flex;
+    /* 
+    O comando display permite dispor os elementos de algumas maneiras,
+    uma delas é com o valor (flex(flexível)). Isso permite que o con-
+    teúdo deste elemento fique flexível.
+    */
+    flex-direction: row;
+    /* 
+    Para este elemento foi aplicado uma estrutura flexível em linha.
+    Portanto o comando (flex-direction) recebeu o valor row (linha).
+    */
+    flex-wrap: wrap;
+    /* 
+    O comando (flex-wrap) recebe o valor (wrap) e realiza a quebra 
+    de linha.
+    */
+}
+#logo
+{
+   flex: 1;
+   padding-top: 50px;
+   padding-left: 80px;
+}
+#logo img 
+{
+   height: 100px;
+   width: 180px;
+}
+#superior nav
+{
+    flex: 2;
+    
+}
+#superior nav ul
+{
+    flex: 1;
+    text-align: center;
+    margin-top: 25px;
+    list-style: none;
+    /* 
+    Usamos o comando (list-style) com o valor none(nenhum), 
+    para retirar os marcadores da lista.
+    */
+}
+main h1
+{
+    text-align: center;
+    padding-top: 120px;
+    font-family: antonio;
+    font-size: 30px;
+    letter-spacing: 15px;
+    /* 
+    Com esse comando (latter-spacing) aplicamos um espaçamento 
+    entre as letras. Podemos aplicar valores positivos ou negativos.
+    Sendo positivo as letras se espalham e negativo se juntam.
+    Outro comando que temos nesse sentido é o (word-spacing),
+    neste comando se espalham as palavras.
+    */
+}
+main p
+{
+    font-size: 18pt;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-top: 100px;
+    text-align: justify;
+    letter-spacing: normal;
+    text-align: center;
+    
+}
+#superior nav ul li
+{
+    text-align: center;
+    font-size: 13pt;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    display: inline-block;
+    /* 
+    Para dispor os itens do menu em linha usamos o comando 
+    (display) com o valor (inline-block).
+    */
+    padding: 8px 8px;
+    /* 
+    Este comando separa os elementos do menu entra si.
+    */
+    transition: 0.7s;
+    margin: 12px 12px;
+}
+#superior nav ul li:hover
+{
+    background-color: rgba(121, 85, 72, 0.3);
+}
+#superior nav ul li a
+{
+    color: black;
+    text-decoration: none;
+    /* 
+    Este comando (text-decoration) como o valor none (nenhum)
+    retira o under-line do link. ( o Under-line é uma decoração).
+    */
+}
+#whatsapp
+{
+    flex: 1;
+    text-align: center;
+    margin-top: 50px;
+}
+#whatsapp a img
+{
+   margin-left: -80px;
+   height: 50px;
+   width: 50px;
+} 
+#whatsapp p
+{
+    text-align: center;
+    font-size: 12pt;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+footer
+{
+    background-size: 100%;
+    height: 185px;
+    display: flex;
+    background-color: rgba(121, 85, 72, 0.4);
+    margin-top: 250px;
+    flex-direction: row;
+   
+}
+footer #endereco
+{
+   flex: 1; 
+   margin-top: 50px;
+   padding: 25px;
+   font-size: 12pt;
+   font-family: Georgia, 'Times New Roman', Times, serif;
+}
+footer #endereco p
+{
+    padding: 1px;
+}
+footer #redes 
+{
+    flex: 1;
+}
+footer #redes nav
+{
+    text-align: right;
+}
+footer #redes nav ul
+{
+    list-style: none;
+}
+footer #redes nav ul li
+{
+    display: inline-block;
+    margin-top: 80px;
+    margin-left: -35px;
+    padding: 30px;
+    
+}
+footer #redes nav ul li a img
+{
+    height: 38px;
+    width: 38px;
+}
